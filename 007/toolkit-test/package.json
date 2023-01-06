@@ -1,0 +1,11 @@
+{
+  "name": "toolkit-test",
+  "version": "1.0.0",
+  "description": "iToolkit test by ushiday",
+  "main": "index.js",
+  "author": "ushiday",
+  "license": "MIT",
+  "dependencies": {
+    "itoolkit": "^1.0.1"
+  }
+}
