@@ -12,7 +12,7 @@
 > iMagazine ushiday@Hack
 
 <a href="https://www.imagazine.co.jp/ushidayhack/" target="_blank">
-   <img targer="_blank" alt="ushiday" src="https://user-images.githubusercontent.com/87407/211135098-86053b43-34bf-4372-962f-8f01418d87ab.png" width="30%" height="30%"/>
+   <img alt="ushiday" src="https://user-images.githubusercontent.com/87407/211135098-86053b43-34bf-4372-962f-8f01418d87ab.png" width="30%" height="30%"/>
 </a>
 
 ### 🏠 [ushiday@Hack](https://www.imagazine.co.jp/ushidayhack/)
