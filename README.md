@@ -19,15 +19,6 @@
 
 ### ✨ [CSC Blog](https://www.cscweb.jp/blog-list/)
 
-
-## Install
-
-```sh
-yarn install
-or 
-npm install
-```
-
 ## Author
 
 👤 **ushiday**
