@@ -11,6 +11,8 @@
 
 > iMagazine ushiday@Hack
 
+![ushiday@Hackな日々_バナー 370＊240px](https://user-images.githubusercontent.com/87407/211135098-86053b43-34bf-4372-962f-8f01418d87ab.png)
+
 ### 🏠 [ushiday@Hack](https://www.imagazine.co.jp/ushidayhack/)
 
 ### ✨ [CSC Blog](https://www.cscweb.jp/blog-list/)
