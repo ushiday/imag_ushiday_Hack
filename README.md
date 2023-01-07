@@ -11,16 +11,21 @@
 
 > iMagazine ushiday@Hack
 
-![ushiday@Hackな日々_バナー 370＊240px](https://user-images.githubusercontent.com/87407/211135098-86053b43-34bf-4372-962f-8f01418d87ab.png)
+<a href="https://www.imagazine.co.jp/ushidayhack/" target="_blank">
+   <img alt="ushiday" src="https://user-images.githubusercontent.com/87407/211135098-86053b43-34bf-4372-962f-8f01418d87ab.png" width="30%" height="30%"/>
+</a>
 
 ### 🏠 [ushiday@Hack](https://www.imagazine.co.jp/ushidayhack/)
 
 ### ✨ [CSC Blog](https://www.cscweb.jp/blog-list/)
 
+
 ## Install
 
 ```sh
 yarn install
+or 
+npm install
 ```
 
 ## Author
