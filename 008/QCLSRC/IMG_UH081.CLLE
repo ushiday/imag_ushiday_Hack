@@ -1,0 +1,43 @@
+             PGM
+        /*--------------------------------------*/
+        /* 変数定義                           */
+        /*--------------------------------------*/
+             DCL        VAR(&X00     ) TYPE(*CHAR) LEN(001) VALUE(X'00')       /*Ｎｕｌｌ       */
+             DCL        VAR(&CMD     ) TYPE(*CHAR) LEN(256)                    /*コマンド       */
+             DCL        VAR(&SQL     ) TYPE(*CHAR) LEN(064)                    /*ＳＱＬ         */
+             DCL        VAR(&P01     ) TYPE(*CHAR) LEN(001)                    /*引数０１       */
+
+             /*変数設定*/
+             CHGVAR VAR(&SQL   )  VALUE('+
+                                         "SELECT * FROM QIWS.QCUSTCDT LIMIT ?" +
+                                       ')
+
+             CHGVAR VAR(&P01   )  VALUE('+
+                                         5+
+                                       ')
+
+             CHGVAR VAR(&CMD   )  VALUE(+
+                                        '/QOpenSys/pkgs/bin/db2util +
+                                         -o json +
+                                         -p ' |< &P01  || ' ' +
+                                         || &SQL +
+                                         |< ' > /tmp/ushiday@hack-81.json' +
+                                         || &X00 +
+                                       )
+
+
+             /*環境変数設定*/
+             ADDENVVAR  ENVVAR(DB2UTIL_JSON_CONTAINER) VALUE(array ) LEVEL(*JOB) REPLACE(*YES)
+             SBMJOB CMD(+
+               CALL PGM(QP2SHELL  ) PARM(        +
+                   '/QOpenSys/usr/bin/sh'        +
+                   '-c'                          +
+                   &CMD                          +
+               )                                 +
+             ) CPYENVVAR(*YES)
+
+
+             RETURN
+
+     ENDPGM
+
