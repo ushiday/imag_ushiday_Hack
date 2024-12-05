@@ -1,0 +1,36 @@
+/*********************************************************************/
+/*  USC_NODE01:システム日付／時間取得                              */
+/*                               2023/01/06 CSC)Y.USHIDA             */
+/*                               YYYY/MM/DD UPDATE BY                */
+/*********************************************************************/
+/*  変数定義                                                       */
+/*********************************************************************/
+             PGM PARM(+
+                      &@MSG_IN     +
+                      &@MSG_OT     +
+                 )
+
+             DCL VAR(&@MSG_IN) TYPE(*CHAR) LEN(256)
+             DCL VAR(&@MSG_OT) TYPE(*CHAR) LEN(256)
+
+             DCL       VAR(&W@TSTMP    ) TYPE(*CHAR) LEN(020   )  /*現在タイムスタンプ    */
+             DCL       VAR(&W@DATE8    ) TYPE(*CHAR) LEN(008   )  /*現在日付（８桁        */
+             DCL       VAR(&W@TIME6    ) TYPE(*CHAR) LEN(006   )  /*現在時刻（６桁        */
+
+            /*システムタイムスタンプYYYYMMDDHHNNSSXXXXXX */
+             RTVSYSVAL  SYSVAL(QDATETIME) RTNVAR(&W@TSTMP)
+
+             CHGVAR     VAR(&W@DATE8)  VALUE(%SST(&W@TSTMP 1 8))
+             CHGVAR     VAR(&W@TIME6)  VALUE(%SST(&W@TSTMP 9 6))
+
+             CHGVAR     VAR(&@MSG_OT  ) VALUE('ようこそ「'         +
+                                             |<&@MSG_IN              +
+                                             |< '」現在の時間は「' +
+                                             |< &W@DATE8           +
+                                             |< '-'                +
+                                             |< &W@TIME6           +
+                                             |< '」です'         +
+                                        )
+
+END:     RETURN
+         ENDPGM
