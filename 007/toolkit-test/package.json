@@ -6,6 +6,7 @@
   "author": "ushiday",
   "license": "MIT",
   "dependencies": {
-    "itoolkit": "^1.0.1"
+    "itoolkit": "^1.0.1",
+    "odbc": "2.4.9"
   }
 }
